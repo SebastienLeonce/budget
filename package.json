@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "balm-ui": "^9.36.0",
+    "connect-history-api-fallback": "^1.6.0",
     "cookie-parser": "~1.4.4",
     "core-js": "^3.6.5",
     "debug": "~2.6.9",
