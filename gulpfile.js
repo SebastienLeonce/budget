@@ -57,4 +57,4 @@ process.on('exit', function () {
     if (node) node.kill()
 })
 
-exports.default = gulp.series(server, defaultTask)
+exports.default = gulp.series(front, server, defaultTask)
