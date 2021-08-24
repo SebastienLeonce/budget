@@ -1,10 +1,50 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </div>
+
   <router-view/>
+  
+  <ui-bottom-navigation content-selector=".container" stacked>
+    <ui-tabs
+      v-model="active"
+      type="textWithIcon"
+      :items="items"
+      stacked
+      @click="onChange"
+    ></ui-tabs>
+  </ui-bottom-navigation>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      items: [
+        {
+          text: 'Home',
+          icon: 'home',
+          url: '/'
+        },
+        {
+          text: 'Edit',
+          icon: 'edit',
+          url: '/edit'
+        },
+        {
+          text: 'Add',
+          icon: 'add',
+          url : "/add"
+        }
+      ],
+      active: 0
+    };
+  },
+  methods: {
+    onChange() {
+      this.$router.push(this.items[this.active].url)
+    }
+  }
+};
+</script>
+
 
 <style lang="stylus">
 #app
