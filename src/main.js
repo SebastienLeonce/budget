@@ -6,6 +6,8 @@ import store from './store'
 
 import BalmUI from 'balm-ui'; // Official Google Material Components
 import BalmUIPlus from 'balm-ui-plus'; // BalmJS Team Material Components
+import BalmUINext from 'balm-ui/dist/balm-ui-next';
+
 import 'balm-ui-css';
 
 createApp(App)
@@ -13,4 +15,5 @@ createApp(App)
     .use(router)
     .use(BalmUI)
     .use(BalmUIPlus)
+    .use(BalmUINext)
     .mount('#app')

@@ -2,7 +2,7 @@
 
   <router-view :class="container"/>
   
-  <ui-bottom-navigation content-selector=".container" stacked>
+  <ui-bottom-navigation>
     <ui-tabs
       v-model="active"
       type="textWithIcon"
@@ -12,6 +12,12 @@
     ></ui-tabs>
   </ui-bottom-navigation>
 </template>
+
+<style scoped>
+.mdc-bottom-navigation {
+  height: auto;
+}
+</style>
 
 <script>
 export default {
