@@ -8,10 +8,5 @@ module.exports = {
         'balm-ui-css': 'balm-ui/dist/balm-ui.css'
       }
     }
-  },
-  pwa: {
-    workboxOptions: {
-      skipWaiting: true
-    }
   }
 };
