@@ -1,3 +1,3 @@
 <template>
-    <h1>Edit</h1>
+    <h1>Ediit</h1>
 </template>
