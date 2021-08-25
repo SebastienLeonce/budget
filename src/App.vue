@@ -1,6 +1,6 @@
 <template>
 
-  <router-view/>
+  <router-view :class="container"/>
   
   <ui-bottom-navigation content-selector=".container" stacked>
     <ui-tabs
