@@ -22,7 +22,7 @@ function server(cb) {
 
 function front(cb) {
     if (vue) vue.kill()
-    vue = spawn(/^win/.test(process.platform) ? 'npm.cmd' : 'npm', ['run', 'build:dev'], {
+    vue = spawn(/^win/.test(process.platform) ? 'npm.cmd' : 'npm', ['run', 'build:prod'], {
         stdio: 'inherit'
     });
 
