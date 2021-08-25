@@ -46,7 +46,7 @@ function defaultTask(cb) {
         port: 5000,
     });
 
-    gulp.watch(["app.js", "./bin/www", "./routes/*.js"], server);
+    gulp.watch(["app.js", "./bin/www", "./routes/*.js", "./db/**/*.js"], server);
     gulp.watch(["./src/**/*.js", "./src/**/*.vue"], gulp.series(front, reload));
     
 
