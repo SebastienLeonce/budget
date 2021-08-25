@@ -7,6 +7,8 @@ import store from './store'
 import BalmUI from 'balm-ui'; // Official Google Material Components
 import BalmUIPlus from 'balm-ui-plus'; // BalmJS Team Material Components
 import BalmUINext from 'balm-ui/dist/balm-ui-next';
+import axios from 'axios'
+import VueAxios from 'vue-axios'
 
 import 'balm-ui-css';
 
@@ -16,4 +18,5 @@ createApp(App)
     .use(BalmUI)
     .use(BalmUIPlus)
     .use(BalmUINext)
+    .use(VueAxios, axios)
     .mount('#app')

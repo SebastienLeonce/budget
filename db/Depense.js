@@ -6,4 +6,10 @@ module.exports = class User {
             cb(err, depense);
         });
     }
+
+    static getAll(cb) {
+        DepenseModel.find(function (err, res) {
+            cb(err, res);
+        })
+    }
 };
