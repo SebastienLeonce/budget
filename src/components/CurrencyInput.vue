@@ -1,5 +1,7 @@
 <template>
     <ui-textfield 
+        pattern="[0-9]*" 
+        inputmode="numeric" 
         v-model="displayValue" 
         @blur="isInputActive = false"
         @focus="isInputActive = true">
