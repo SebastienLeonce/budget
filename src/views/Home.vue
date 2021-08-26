@@ -1,18 +1,18 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <h1>Home</h1>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+/*
+var data = 'Peter';
 
+db.User.find({'name' : new RegExp(data, 'i')}, function(err, docs){
+    cb(docs);
+});
+https://www.chartjs.org/docs/latest/charts/doughnut.html#pie
+https://vue-chartjs.org/guide/#creating-your-first-chart
+*/
 export default {
   name: 'Home',
-  components: {
-    HelloWorld
-  }
 }
 </script>
