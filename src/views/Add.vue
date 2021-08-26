@@ -11,7 +11,7 @@
                 </ui-grid-cell>
                 <ui-grid-cell>
                     <ui-form-field :class="itemClass">
-                        <ui-select v-model="categorie" :options="options" @selected="onSelected($event)">
+                        <ui-select v-model="categorie" :options="options">
                             Catégorie
                         </ui-select>
                     </ui-form-field>
@@ -99,7 +99,6 @@
         },
         data() {
             return {
-                selectedValue: 3,
                 optionss: [{
                         label: 'Entrée',
                         value: true
@@ -122,9 +121,6 @@
             };
         },
         methods: {
-            onSelected(selected) {
-                this.selected = selected.value;
-            },
             Submit() {
                 this.axios.post('/api', {
                     description: this.description,
