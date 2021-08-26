@@ -6,6 +6,7 @@
         @blur="isInputActive = false"
         @focus="isInputActive = true">
     </ui-textfield>
+    <input type="text" inputmode="numeric" pattern="[0-9]*">
 </template>
 
 <script>
