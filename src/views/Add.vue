@@ -125,9 +125,6 @@
             onSelected(selected) {
                 this.selected = selected.value;
             },
-            test(e) {
-                console.log(e.target.value);
-            },
             Submit() {
                 this.axios.post('/api', {
                     description: this.description,
