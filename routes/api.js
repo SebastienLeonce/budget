@@ -6,6 +6,7 @@ const db = require("../db");
 router.post('/', function(req, res, next) {
     new db.depense(req.body, (err, data) => {
         if (err) {
+            console.log("ici", err)
             return next(new Error(err));
         } else {
             res.json({ok : 1});

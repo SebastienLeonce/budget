@@ -105,7 +105,8 @@
                     }
                 ],
                 config: {
-                    defaultDate: 'today'
+                    defaultDate: 'today',
+                    dateFormat: "d/m/Y"
                 },
                 date: '',
                 options,

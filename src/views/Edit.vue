@@ -9,21 +9,19 @@
             return {
                 depenses : [],
                 thead: [
-                    'ID',
                     'Catégorie',
                     'Description',
                     'Prix',
                     'Date',
                     'Entree'
                 ],
-                tbody: ['_id', 'categorie', 'description', 'prix', 'date', 'in']
+                tbody: ['categorie', 'description', 'prix', 'date', 'in']
             }
         },
         mounted()  {
             var that = this;
             that.axios.get('/api')
                 .then(function (response) {
-                    console.log(response.data);
                     that.depenses = response.data;
                 }).catch(function (error) {
                     console.log(error);
