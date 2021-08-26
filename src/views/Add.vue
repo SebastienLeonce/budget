@@ -18,7 +18,7 @@
                 </ui-grid-cell>
                 <ui-grid-cell>
                     <ui-form-field :class="itemClass">
-                        <ui-textfield v-model="prix" type="number"> Prix </ui-textfield>
+                        <CurrencyInput v-model="prix"/>
                     </ui-form-field>
                 </ui-grid-cell>
                 <ui-grid-cell>
@@ -57,6 +57,8 @@
 </style>
 
 <script>
+    import CurrencyInput from '@/components/CurrencyInput.vue'
+
     const options = [{
             label: 'Salaire',
             value: 'Salaire'
@@ -92,6 +94,9 @@
     ];
 
     export default {
+        components: {
+            CurrencyInput
+        },
         data() {
             return {
                 selectedValue: 3,
@@ -119,6 +124,9 @@
         methods: {
             onSelected(selected) {
                 this.selected = selected.value;
+            },
+            test(e) {
+                console.log(e.target.value);
             },
             Submit() {
                 this.axios.post('/api', {
