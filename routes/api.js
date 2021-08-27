@@ -13,7 +13,7 @@ router.post('/', function(req, res, next) {
         }
     });
 }).get('/', function (req, res, next) {
-    db.depense.getAll((err, data) => {
+    db.depense.getAll(req.query.period, (err, data) => {
         if (err) {
             return next(new Error(err));
         } else {

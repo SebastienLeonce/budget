@@ -7,8 +7,8 @@ module.exports = class User {
         });
     }
 
-    static getAll(cb) {
-        DepenseModel.find(function (err, res) {
+    static getAll(period, cb) {
+        DepenseModel.find({'date' : new RegExp(period)}, function (err, res) {
             cb(err, res);
         })
     }

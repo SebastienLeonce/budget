@@ -25,13 +25,16 @@
         },
         mounted()  {
             var that = this;
-            that.axios.get('/api')
-                .then(function (response) {
-                    that.depenses = response.data;
-                }).catch(function (error) {
-                    console.log(error);
-                });
+            var d = new Date();
+            that.axios.get('/api',{
+                params: {
+                    period: (d.getMonth() + 1) + "/" + d.getFullYear()
+                }
+            }).then(function (response) {
+                that.depenses = response.data;
+            }).catch(function (error) {
+                console.log(error);
+            });
         }
-        //trending_up trending_down
     };
 </script>

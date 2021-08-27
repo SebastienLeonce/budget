@@ -9,6 +9,7 @@ import BalmUIPlus from 'balm-ui-plus'; // BalmJS Team Material Components
 import BalmUINext from 'balm-ui/dist/balm-ui-next';
 import axios from 'axios'
 import VueAxios from 'vue-axios'
+import VueApexCharts from "vue3-apexcharts";
 
 import 'balm-ui-css';
 
@@ -19,4 +20,5 @@ createApp(App)
     .use(BalmUIPlus)
     .use(BalmUINext)
     .use(VueAxios, axios)
+    .use(VueApexCharts)
     .mount('#app')
