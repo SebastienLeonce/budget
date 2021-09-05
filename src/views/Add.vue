@@ -68,6 +68,10 @@
             value: 'CAF'
         },
         {
+            label: 'Tabac',
+            value: 'Tabac'
+        },
+        {
             label: 'Loyer',
             value: 'Loyer'
         },

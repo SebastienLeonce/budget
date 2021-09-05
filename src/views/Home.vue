@@ -7,7 +7,7 @@
   export default {
     name: 'Home',
     components: {
-      
+
     },
     data() {
       return {
@@ -60,19 +60,25 @@
 
       that.axios.get('/api', {
         params: {
-          //TODO RAOUTER +1
-          period: (d.getMonth() + 0) + "/" + d.getFullYear()
+          period: (d.getMonth() + 1) + "/" + d.getFullYear()
         }
       }).then(function (response) {
         let labels = [];
         let data = [];
+        let entree = 0;
+        let sortie = 0;
 
         for (const property in response.data) {
-          if (labels.includes(response.data[property].categorie)) {
-            data[labels.indexOf(response.data[property].categorie)] += parseInt(response.data[property].prix);
+          if (!response.data[property].in) {
+            sortie += parseInt(response.data[property].prix);
+            if (labels.includes(response.data[property].categorie)) {
+              data[labels.indexOf(response.data[property].categorie)] += parseInt(response.data[property].prix);
+            } else {
+              labels.push(response.data[property].categorie);
+              data.push(parseInt(response.data[property].prix))
+            }
           } else {
-            labels.push(response.data[property].categorie);
-            data.push(parseInt(response.data[property].prix))
+            entree += parseInt(response.data[property].prix);
           }
         }
         that.series = data;
