@@ -12,7 +12,7 @@
     data() {
       return {
         chartOptions: {
-          labels: ['a', 'b', 'c', 'd', 'e'],
+          labels: [],
           tooltip: {
             enabled: false
           },
@@ -51,7 +51,7 @@
             }
           }
         },
-        series: [44, 55, 41, 17, 15],
+        series: [],
       }
     },
     mounted() {
