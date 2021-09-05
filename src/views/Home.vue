@@ -89,6 +89,12 @@
             entree += parseInt(response.data[property].prix);
           }
         }
+
+        if (entree > sortie) {
+          data.push(entree - sortie);
+          labels.push('Epargne');
+        }
+
         that.entree = entree + " €";
         that.sortie = sortie + " €";
         that.series = data;
