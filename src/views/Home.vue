@@ -1,6 +1,6 @@
 <template>
   <h1>Home</h1>
-  <apexchart width="380" type="donut" :options="chartOptions" :series="series"></apexchart>
+  <apexchart type="donut" :options="chartOptions" :series="series"></apexchart>
 </template>
 
 <script>
@@ -18,6 +18,9 @@
           },
           dataLabels: {
             enabled: false
+          },
+          legend: {
+            position: "top"
           },
           plotOptions: {
             pie: {
