@@ -1,6 +1,7 @@
 <template>
     <ui-textfield 
         :attrs="{inputmode: 'numeric'}"
+        :fullwidth="true"
         v-model="displayValue" 
         @blur="isInputActive = false"
         @focus="isInputActive = true">

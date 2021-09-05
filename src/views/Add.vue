@@ -11,7 +11,7 @@
                 </ui-grid-cell>
                 <ui-grid-cell>
                     <ui-form-field :class="itemClass">
-                        <ui-select v-model="categorie" :options="options">
+                        <ui-select v-model="categorie" :options="options" :fullwidth="true">
                             Catégorie
                         </ui-select>
                     </ui-form-field>
@@ -23,14 +23,13 @@
                 </ui-grid-cell>
                 <ui-grid-cell>
                     <ui-form-field :class="itemClass">
-                        <ui-datepicker v-model="date" :config="config" placeholder="Select Date.." toggle clear>
+                        <ui-datepicker v-model="date" :config="config" placeholder="Select Date.." toggle clear :fullwidth="true">
                         </ui-datepicker>
                     </ui-form-field>
                 </ui-grid-cell>
                 <ui-grid-cell>
                     <ui-form-field :class="itemClass">
                         <ui-chips v-model="entree" type="choice" :options="optionss"></ui-chips>
-
                     </ui-form-field>
                 </ui-grid-cell>
             </ui-grid>
