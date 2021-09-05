@@ -1,6 +1,12 @@
 <template>
   <h1>Home</h1>
   <apexchart type="donut" :options="chartOptions" :series="series"></apexchart>
+  <div>
+    <p :class="$tt('overline')"> 
+      Entrée: <span style="color: blue">{{ entree }}</span>
+      Sortie: <span style="color: red">{{ sortie }}</span>
+    </p>
+  </div>
 </template>
 
 <script>
@@ -52,6 +58,8 @@
           }
         },
         series: [],
+        entree: "",
+        sortie: ""
       }
     },
     mounted() {
@@ -81,6 +89,8 @@
             entree += parseInt(response.data[property].prix);
           }
         }
+        that.entree = entree + " €";
+        that.sortie = sortie + " €";
         that.series = data;
         that.chartOptions = {
           labels: labels

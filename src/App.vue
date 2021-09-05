@@ -1,16 +1,17 @@
 <template>
-
-  <router-view :class="container"/>
+  <div class="container">
+    <router-view/>
   
-  <ui-bottom-navigation>
-    <ui-tabs
-      v-model="active"
-      type="textWithIcon"
-      :items="items"
-      stacked
-      @click="onChange"
-    ></ui-tabs>
-  </ui-bottom-navigation>
+    <ui-bottom-navigation content-selector=".container">
+      <ui-tabs
+        v-model="active"
+        type="textWithIcon"
+        :items="items"
+        stacked
+        @click="onChange"
+      ></ui-tabs>
+    </ui-bottom-navigation>
+  </div>
 </template>
 
 <style scoped>
