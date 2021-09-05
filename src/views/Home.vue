@@ -92,7 +92,7 @@
 
         if (entree > sortie) {
           data.push(entree - sortie);
-          labels.push('Epargne');
+          labels.push('Disponible');
         }
 
         that.entree = entree + " €";

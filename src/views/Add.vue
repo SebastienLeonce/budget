@@ -94,6 +94,14 @@
             label: 'Loisir',
             value: 'Loisir'
         },
+        {
+            label: 'Epargne',
+            value: 'Epargne'
+        },
+        {
+            label: 'Autre',
+            value: 'Autre'
+        },
     ];
 
     export default {
