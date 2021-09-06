@@ -1,9 +1,19 @@
 <template>
     <h1>Edit</h1>
-    <ui-table :data="depenses" :thead="thead" :tbody="tbody">
+    <ui-table 
+        :data="depenses" 
+        :thead="thead" 
+        :tbody="tbody"
+        fullwidth>
         <template #in="{ data }">
             <ui-icon>{{data.in == true ? "trending_up" : "trending_down"}}</ui-icon>
         </template>
+
+        <ui-pagination
+            v-model="page"
+            :total="total"
+            show-total>
+        </ui-pagination>
     </ui-table>
     
 </template>
@@ -20,7 +30,9 @@
                     'Date',
                     'Entree'
                 ],
-                tbody: ['categorie', 'description', 'prix', 'date', { slot: 'in'}]
+                tbody: ['categorie', 'description', 'prix', 'date', { slot: 'in'}],
+                page: 2,
+                total: 5
             }
         },
         mounted()  {

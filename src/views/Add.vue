@@ -133,6 +133,7 @@
         },
         methods: {
             Submit() {
+                let that = this;
                 this.axios.post('/api', {
                     description: this.description,
                     categorie  : this.categorie  ,
@@ -141,10 +142,23 @@
                     in         : this.entree
                 })
                 .then(function (response) {
-                    console.log(response);
+                    that.$alert({
+                        message: 'Dépense ajoutée avec succès',
+                        state: 'success',
+                        stateOutlined: true
+                    });
+                    that.description = "";
+                    that.categorie = "";
+                    that.prix = 0;
+                    that.date = "";
+                    that.entree = "";
                 })
                 .catch(function (error) {
-                    console.log(error);
+                    that.$alert({
+                        message: 'Vérifier les informations ou la connexion internet',
+                        state: 'error',
+                        stateOutlined: true
+                    });
                 });
             }
         }
