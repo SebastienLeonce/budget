@@ -12,7 +12,9 @@
         <ui-pagination
             v-model="page"
             :total="total"
-            show-total>
+            show-total
+            :page-size="5"
+            show-jumper>
         </ui-pagination>
     </ui-table>
     
@@ -31,8 +33,8 @@
                     'Entree'
                 ],
                 tbody: ['categorie', 'description', 'prix', 'date', { slot: 'in'}],
-                page: 2,
-                total: 5
+                page: 1,
+                total: 100
             }
         },
         mounted()  {
