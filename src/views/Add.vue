@@ -34,7 +34,8 @@
                 </ui-grid-cell>
             </ui-grid>
             <ui-form-field :class="actionClass">
-                <ui-button raised @click="Submit">Submit</ui-button>
+                <ui-button raised @click="Submit" :disabled=submit>Submit</ui-button>
+                <ui-spinner :closed=!submit active></ui-spinner>
             </ui-form-field>
         </template>
     </ui-form>
@@ -123,6 +124,7 @@
                     defaultDate: 'today',
                     dateFormat: "d/m/Y"
                 },
+                submit: false,
                 date: '',
                 options,
                 categorie: '',
@@ -133,6 +135,7 @@
         },
         methods: {
             Submit() {
+                this.submit = true;
                 let that = this;
                 this.axios.post('/api', {
                     description: this.description,
@@ -152,6 +155,7 @@
                     that.prix = 0;
                     that.date = "";
                     that.entree = "";
+                    that.submit = false;
                 })
                 .catch(function (error) {
                     that.$alert({
@@ -159,6 +163,7 @@
                         state: 'error',
                         stateOutlined: true
                     });
+                    that.submit = false;
                 });
             }
         }
