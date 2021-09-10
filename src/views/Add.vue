@@ -125,7 +125,7 @@
                     dateFormat: "d/m/Y"
                 },
                 submit: false,
-                date: '',
+                date: new Date().toLocaleDateString("fr-fr"),
                 options,
                 categorie: '',
                 prix: 0,
