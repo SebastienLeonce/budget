@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.74a16ac8d16e1a8e6cd45e63ecab3619.js"
+  "/precache-manifest.6b2a2817fa589d74de805ca333ee591e.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "budget-vue"});
