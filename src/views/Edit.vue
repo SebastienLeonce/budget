@@ -48,6 +48,7 @@
             }).then(function (response) {
                 that.depenses = response.data;
                 that.data = that.depenses.slice((that.page - 1)*8, (that.page - 1)*8 + 8)
+                that.total = response.data.length;
             }).catch(function (error) {
                 console.log(error);
             });
